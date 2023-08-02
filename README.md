@@ -2,15 +2,21 @@
 
 Simple CLI project was written as part of my technical interview assessment.
 
-Video Demo: https://asciinema.org/a/AgRCZs0bk6eDptj9kPOe81Cwb FIXME
+Video Demo: https://youtu.be/uLRE1A3BEJE
 
 Address Book system is an interactive command-line interface (CLI) application
 for managing and storing contact information.
 
+## If you had1-2 weeks on this task, what would you do to improve the program?
+
+- First, I would ensure that I write unit tests and adhere to the principles of Test-driven development.
+- I would write a detailed [proposal](https://gist.github.com/smalinux/2e9c5537fdac65501a655280352c9c15#google-summer-of-code-2022) to ensure that I understand the requirements well before starting the code, as I did in my previous work with Google Summer of Code.
+- And I will complete the remaining to-do list.
+
 ## Quick run using docker
 Just one command:
 ``` bash
-# https://hub.docker.com/r/smalinux/addbook FIXME
+# https://hub.docker.com/r/smalinux/addbook
 docker run -it --rm smalinux/addbook
 ```
 
@@ -24,8 +30,8 @@ apt-get install cmake build-essential sqlite3 libsqlite3-dev libcriterion-dev
 
 build:
 ``` bash
-git clone https://github.com/smalinux/AddBook
-cd AddBook
+git clone https://github.com/smalinux/addbook
+cd addbook
 make
 ```
 
@@ -59,7 +65,7 @@ doxygen
 - [x] Doxygen support
 - [x] `astyle` support
 - [x] Input Validation (Almost done. skip it for now.)
-- [x] Check scanf return value: https://stackoverflow.com/q/7271939/5688267
+- [ ] Check scanf return value: https://stackoverflow.com/q/7271939/5688267 scanf("%s" is never safe. use fgets instead!
 - [ ] Unit testing using `criterion` unit test framework
 - [x] Use `log.h` lib for logging support
 - [ ] Add `rxi/log` as git subtree (trivial. skip it for now.)
