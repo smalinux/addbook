@@ -1,0 +1,9 @@
+compile_commands.json
+*.o
+main
+addbook
+err
+html/*
+
+*.orig
+test.db
