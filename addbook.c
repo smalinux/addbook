@@ -255,19 +255,19 @@ int adbk_db_record_search(sqlite3* db, char* keyword) {
    log_info("%s() function called", __func__);
 
    sprintf(sql, "SELECT * FROM Record WHERE FName LIKE '\%%%s\%%'"
-         "OR LName LIKE '%%%s%%'"
-         "OR Email LIKE '%%%s%%'"
-         "OR Phone LIKE '%%%s%%'"
-         "OR Street LIKE '%%%s%%'"
-         "OR TOWN LIKE '%%%s%%'"
-         "OR Country LIKE '%%%s%%';",
-         keyword,
-         keyword,
-         keyword,
-         keyword,
-         keyword,
-         keyword,
-         keyword);
+           "OR LName LIKE '%%%s%%'"
+           "OR Email LIKE '%%%s%%'"
+           "OR Phone LIKE '%%%s%%'"
+           "OR Street LIKE '%%%s%%'"
+           "OR TOWN LIKE '%%%s%%'"
+           "OR Country LIKE '%%%s%%';",
+           keyword,
+           keyword,
+           keyword,
+           keyword,
+           keyword,
+           keyword,
+           keyword);
 
    rc = sqlite3_exec(db, sql, search_callback, 0, &err_msg);
 
@@ -416,14 +416,14 @@ void adbk_print_table_onerow(int id, Record* record) {
    sprintf(id_buff, "%d", id);
 
    ft_write_ln(table,
-         id_buff,
-         record->f_name,
-         record->l_name,
-         record->email,
-         record->phone,
-         street_buff,
-         record->town,
-         record->country);
+               id_buff,
+               record->f_name,
+               record->l_name,
+               record->email,
+               record->phone,
+               street_buff,
+               record->town,
+               record->country);
 
    printf("%s\n", ft_to_string(table));
    ft_destroy_table(table);
@@ -438,14 +438,14 @@ void adbk_print_table(int total_rows, Record* records) {
 
    for (size_t i = 0; i < total_rows; i++) {
       ft_write_ln(table,
-            records[i].id_buff,
-            records[i].f_name,
-            records[i].l_name,
-            records[i].email,
-            records[i].phone,
-            records[i].street_buff,
-            records[i].town,
-            records[i].country);
+                  records[i].id_buff,
+                  records[i].f_name,
+                  records[i].l_name,
+                  records[i].email,
+                  records[i].phone,
+                  records[i].street_buff,
+                  records[i].town,
+                  records[i].country);
    }
    printf("%s\n", ft_to_string(table));
    ft_destroy_table(table);
